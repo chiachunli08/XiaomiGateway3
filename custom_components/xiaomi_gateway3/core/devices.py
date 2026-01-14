@@ -1912,6 +1912,14 @@ DEVICES += [{
         # BaseConv("led", "sensor", mi="4.p.1"),  # bool
     ],
 }, {
+    28377: ["Linptech", "Presence Sensor ES5", "ES5DB", "linp.sensor_occupy.es4b"],
+    "spec": [
+        # main sensors
+        BoolConv("occupancy", "binary_sensor", mi="2.p.1078"),
+        BaseConv("illuminance", "sensor", mi="2.p.1005"),
+        BaseConv("led", "switch", mi="3.p.3"),
+    ],    
+}, {
     6281: ["Linptech", "Door/Window Sensor", "MS1BB", "linp.magnet.m1"],
     "spec": [
         MapConv("contact", "binary_sensor", mi="2.e.1018.p.1004", map={1: True, 2: False}),
